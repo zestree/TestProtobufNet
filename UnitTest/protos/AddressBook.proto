@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+message Contact {
+	int32 id = 1;
+	string name = 2;
+	oneof method {
+		string email = 3;
+		int32 phone = 4;
+		bool contactable = 5;
+	}
+}
+
+message AddressBook {
+	repeated Contact contact = 1;
+}
